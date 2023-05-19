@@ -1,13 +1,12 @@
 import express, { Express } from 'express'
 
-import router from './infrastructure/routes'
-import server from './infrastructure/express/server'
+import { router, server } from './infrastructure'
 
 const bootstrap = (): void => {
-  const app: Express = express()
+    const app: Express = express()
 
-  router(app)
-  server(app)
+    router(app)
+    server(app)
 }
 
 bootstrap()

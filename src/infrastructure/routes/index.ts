@@ -1,9 +1,9 @@
 import { Express } from 'express'
 
+import rootRouter from './root.router'
 import diariesRouter from './diaries.router'
 
-const router = (app: Express) => {
-  app.use('/', diariesRouter)
+export const router = (app: Express) => {
+    app.use('/', diariesRouter)
+    app.use('/', rootRouter)
 }
-
-export default router
